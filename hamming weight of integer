@@ -1,10 +1,10 @@
 x = 6
-x = '{:032b}'.format(int(x))
+y = '{:032b}'.format(int(x))
         
 count = 0
         
 for i in range(0,32):
-  if x[i] == '0':
+  if y[i] == '0':
       count += 1
-print (x)                  
-print ('Hamming weight of '+ x + ' is ' count)
+print (y)                  
+print ('Hamming weight of ',x,' is ',count)

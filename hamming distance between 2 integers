@@ -1,0 +1,17 @@
+import time
+start_time = time.time()
+
+x = 6
+y = 10
+binx = '{:032b}'.format(int(x))
+biny = '{:032b}'.format(int(y))
+        
+count = 0
+        
+for i in range(0,32):
+  if binx[i] != biny[i]:
+      count += 1
+                
+print ('Hamming distance between',x,' & ',y,' is ',count )
+
+print("--- %s seconds ---" % (time.time() - start_time))

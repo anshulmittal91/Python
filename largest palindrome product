@@ -1,0 +1,28 @@
+def largestPalindrome(self, n):
+        
+        """
+        :type n: int
+        :rtype: int
+        """
+        palindrome = -1
+        
+        # n is the the number of digits : [1,8] 
+        # define range using 'n'
+        r_1 = (10**n) - 1
+        r_2 = (10**(n-1)) -1
+        
+        for i in range (r_1, r_2, -1):
+            for j in range (i, r_2, -1):
+            
+                x = i*j
+                s = str(x)
+                rs = s[::-1]
+                
+            # if product is palindrome and is greater than last recorded palindrome
+                if rs == s and i * j > palindrome:
+                    palindrome = i * j
+                    
+        # return palindrome mod 1337 for large results            
+        return (palindrome%1337);
+        
+        #this code exceeds time and memory limits beyond n = 3
